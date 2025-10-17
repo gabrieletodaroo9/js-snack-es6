@@ -103,15 +103,28 @@ const footballTeam = [
 
 //  Avvio un ciclo for per assegnare a punti fatti e falli subiti un numero random
 
-for (i = 0; i < footballTeam.length; i++){
-    footballTeam[i].points = getRandomNumber(30,99)
-    footballTeam[i].foulsReceived = getRandomNumber(5,50)
+for (i = 0; i < footballTeam.length; i++) {
+    footballTeam[i].points = getRandomNumber(30, 99)
+    footballTeam[i].foulsReceived = getRandomNumber(5, 50)
 }
 
 console.log(footballTeam);
 
 // Creo un nuovo array per contenere tutte le squadre ma senza i punti fatti
 
+const newArrFootballTeam = []
+
 // Avvio un ciclo che prenda solo le proprietà che ci servono e ce le trasferisca al nuovo array ad ogni interazione
 
+for (i = 0; i < footballTeam.length; i++) {
+    // Creo un nuovo oggetto da pushare ad ogni interazione
+    const newObj = {
+        name: footballTeam[i].name,
+        foulsReceived: footballTeam[i].foulsReceived
+    }
+    // Invio al nuovo array il nuovo oggetto ad ogni interazione
+    newArrFootballTeam.push(newObj)
+}
+
 // Stampo il risultato in console
+console.log(newArrFootballTeam);
