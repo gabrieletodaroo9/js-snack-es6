@@ -109,3 +109,9 @@ for (i = 0; i < footballTeam.length; i++){
 }
 
 console.log(footballTeam);
+
+// Creo un nuovo array per contenere tutte le squadre ma senza i punti fatti
+
+// Avvio un ciclo che prenda solo le proprietà che ci servono e ce le trasferisca al nuovo array ad ogni interazione
+
+// Stampo il risultato in console
