@@ -11,35 +11,43 @@ const bikes = [
         weight: 7.9
     },
     {
-        name:"Pino",
+        name: "Pino",
         weight: 7.5
     },
     {
-        name:"Gino",
+        name: "Gino",
         weight: 8.3
     },
     {
-        name:"Tino",
+        name: "Tino",
         weight: 6.8
     },
     {
-        name:"Filippo",
+        name: "Filippo",
         weight: 6.6
     },
     {
-        name:"Mario",
-        weight: 9.2
+        name: "Mario",
+        weight: 6.2
     },
-] 
+]
 // Avvio un ciclo sull'array per confrontare il peso di ogni bici e lo inserisco in una variabile
 
 // Creo una variabile di appoggio per il peso che dovrò salvare alla fine
+
+let lightestBike = bikes[0]
+
 // Avvio un ciclo for
-// SE il peso attuale dentro la variabile è maggiore del di quello su cui stiamo scorrendo
-// aggiorno il valore della variabile con quello su cui stiamo scorrendo 
+for (i = 0; i < bikes.length; i++) {
+    // SE il peso attuale dentro la variabile è maggiore di quello su cui stiamo scorrendo
+    if (lightestBike.weight > bikes[i].weight) {
+        // aggiorno il valore della variabile con quello su cui stiamo scorrendo
+        lightestBike = bikes[i]
+    }
+}
+console.log(lightestBike);
 
 // Stampo in pagina la variabile contente l'oggetto con il peso minore
-
 
 
 
