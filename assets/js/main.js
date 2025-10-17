@@ -124,9 +124,9 @@ const newArrFootballTeams = []
 
 // Avvio un ciclo che prenda solo le proprietà che ci servono e ce le trasferisca al nuovo array ad ogni interazione
 
-for (i = 0; i < footballTeams.length; i++) {
+for (let key in footballTeams) {
     // Creo una variabile per assegnare l'attuale iterazione
-    const thisTeam = footballTeams[i]
+    const thisTeam = footballTeams[key]
     // Creo un nuovo oggetto da pushare ad ogni interazione
     const newObj = {
         name: thisTeam["name"],
