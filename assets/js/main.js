@@ -38,11 +38,13 @@ const bikes = [
 let lightestBike = bikes[0]
 
 // Avvio un ciclo for
-for (i = 0; i < bikes.length; i++) {
+for (i = 1; i < bikes.length; i++) {
+    // Creo una variabile per assegnare l'attuale interazione
+    const thisbike = bikes[i]
     // SE il peso attuale dentro la variabile è maggiore di quello su cui stiamo scorrendo
-    if (lightestBike.weight > bikes[i].weight) {
+    if (lightestBike["weight"] > thisbike["weight"]) {
         // aggiorno il valore della variabile con quello su cui stiamo scorrendo
-        lightestBike = bikes[i]
+        lightestBike = thisbike
     }
 }
 console.log(lightestBike);
@@ -50,7 +52,7 @@ console.log(lightestBike);
 // Stampo in pagina la variabile contente l'oggetto con il peso minore
 
 const lightestBikeEl = document.getElementById("lightest-bike")
-lightestBikeEl.innerText = `La bici che pesa meno è ${lightestBike.name} e pesa ${lightestBike.weight}!`
+lightestBikeEl.innerText = `La bici che pesa meno è ${lightestBike["name"]} e pesa ${lightestBike["weight"]}!`
 
 
 
@@ -73,7 +75,7 @@ const getRandomNumber = (min, max) => {
 
 // Creo un array con diverse squadre di calcio
 
-const footballTeam = [
+const footballTeams = [
     {
         name: "Barcelona",
         points: 0,
@@ -103,28 +105,36 @@ const footballTeam = [
 
 //  Avvio un ciclo for per assegnare a punti fatti e falli subiti un numero random
 
-for (i = 0; i < footballTeam.length; i++) {
-    footballTeam[i].points = getRandomNumber(30, 99)
-    footballTeam[i].foulsReceived = getRandomNumber(5, 50)
+for (let key in footballTeams) {
+    thisTeam = footballTeams[key]
+    thisTeam["points"] = getRandomNumber(30, 99);
+    thisTeam["foulsReceived"] = getRandomNumber(5, 50);
 }
 
-console.log(footballTeam);
+// for (i = 0; i < footballTeams.length; i++) {
+//     footballTeams[i].points = getRandomNumber(30, 99)
+//     footballTeams[i].foulsReceived = getRandomNumber(5, 50)
+// }
+
+console.log(footballTeams);
 
 // Creo un nuovo array per contenere tutte le squadre ma senza i punti fatti
 
-const newArrFootballTeam = []
+const newArrFootballTeams = []
 
 // Avvio un ciclo che prenda solo le proprietà che ci servono e ce le trasferisca al nuovo array ad ogni interazione
 
-for (i = 0; i < footballTeam.length; i++) {
+for (i = 0; i < footballTeams.length; i++) {
+    // Creo una variabile per assegnare l'attuale iterazione
+    const thisTeam = footballTeams[i]
     // Creo un nuovo oggetto da pushare ad ogni interazione
     const newObj = {
-        name: footballTeam[i].name,
-        foulsReceived: footballTeam[i].foulsReceived
+        name: thisTeam["name"],
+        foulsReceived: thisTeam["foulsReceived"]
     }
     // Invio al nuovo array il nuovo oggetto ad ogni interazione
-    newArrFootballTeam.push(newObj)
+    newArrFootballTeams.push(newObj)
 }
 
 // Stampo il risultato in console
-console.log(newArrFootballTeam);
+console.log(newArrFootballTeams);
