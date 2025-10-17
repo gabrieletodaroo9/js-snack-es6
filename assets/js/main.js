@@ -63,3 +63,40 @@ lightestBikeEl.innerText = `La bici che pesa meno è ${lightestBike.name} e pesa
 // Generare numeri random al posto degli 0 nelle proprietà “punti” fatti e “falli subiti”.
 // Infine, creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 // >
+
+
+// Aggiungo funzione mathrandom
+
+const getRandomNumber = (min, max) => {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+};
+
+// Creo un array con diverse squadre di calcio
+
+const footballTeam = [
+    {
+        nome: "Barcelona",
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+    {
+        nome: "Inter",
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+    {
+        nome: "Real Madrid",
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+    {
+        nome: "Bayern Monaco",
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+    {
+        nome: "Liverpool",
+        puntiFatti: 0,
+        falliSubiti: 0
+    },
+];
