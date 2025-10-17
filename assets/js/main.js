@@ -31,6 +31,15 @@ const bikes = [
         weight: 9.2
     },
 ] 
+// Avvio un ciclo sull'array per confrontare il peso di ogni bici e lo inserisco in una variabile
+
+// Creo una variabile di appoggio per il peso che dovrò salvare alla fine
+// Avvio un ciclo for
+// SE il peso attuale dentro la variabile è maggiore del di quello su cui stiamo scorrendo
+// aggiorno il valore della variabile con quello su cui stiamo scorrendo 
+
+// Stampo in pagina la variabile contente l'oggetto con il peso minore
+
 
 
 
