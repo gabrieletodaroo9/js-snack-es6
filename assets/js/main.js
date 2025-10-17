@@ -7,28 +7,28 @@
 
 const bikes = [
     {
-        name: "Fausto",
+        name: "Aetheros",
         weight: 7.9
     },
     {
-        name: "Pino",
+        name: "Strada Endurance",
         weight: 7.5
     },
     {
-        name: "Gino",
-        weight: 8.3
+        name: "Grimpeur Max",
+        weight: 7.3
     },
     {
-        name: "Tino",
-        weight: 6.8
+        name: "Zenith Racer",
+        weight: 6.3
     },
     {
-        name: "Filippo",
+        name: "Ciclone Speed",
         weight: 6.6
     },
     {
-        name: "Mario",
-        weight: 6.2
+        name: "Urban Drifter",
+        weight: 6.9
     },
 ]
 // Avvio un ciclo sull'array per confrontare il peso di ogni bici e lo inserisco in una variabile
@@ -48,6 +48,10 @@ for (i = 0; i < bikes.length; i++) {
 console.log(lightestBike);
 
 // Stampo in pagina la variabile contente l'oggetto con il peso minore
+
+const lightestBikeEl = document.getElementById("lightest-bike")
+lightestBikeEl.innerText = `La bici che pesa meno è ${lightestBike.name} e pesa ${lightestBike.weight}!`
+
 
 
 
