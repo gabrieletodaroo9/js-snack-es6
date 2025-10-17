@@ -75,28 +75,37 @@ const getRandomNumber = (min, max) => {
 
 const footballTeam = [
     {
-        nome: "Barcelona",
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: "Barcelona",
+        points: 0,
+        foulsReceived: 0
     },
     {
-        nome: "Inter",
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: "Inter",
+        points: 0,
+        foulsReceived: 0
     },
     {
-        nome: "Real Madrid",
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: "Real Madrid",
+        points: 0,
+        foulsReceived: 0
     },
     {
-        nome: "Bayern Monaco",
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: "Bayern Monaco",
+        points: 0,
+        foulsReceived: 0
     },
     {
-        nome: "Liverpool",
-        puntiFatti: 0,
-        falliSubiti: 0
+        name: "Liverpool",
+        points: 0,
+        foulsReceived: 0
     },
 ];
+
+//  Avvio un ciclo for per assegnare a punti fatti e falli subiti un numero random
+
+for (i = 0; i < footballTeam.length; i++){
+    footballTeam[i].points = getRandomNumber(30,99)
+    footballTeam[i].foulsReceived = getRandomNumber(5,50)
+}
+
+console.log(footballTeam);
